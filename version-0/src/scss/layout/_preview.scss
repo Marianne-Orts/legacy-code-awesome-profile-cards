@@ -1,0 +1,185 @@
+.preview {
+  height: 457px;
+  background: $gradient-preview;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media all and (min-width: 768px) {
+    height: 812px;
+    margin: 20px 40px 20px 0;
+    border-radius: 6px;
+    padding-left: 0;
+    order: 2;
+  }
+  @media all and (min-width: 1200px) {
+  }
+}
+
+.reset {
+  margin-top: 38px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  height: 30px;
+  width: 75px;
+  color: $color-general-text;
+  font-family: $font-main;
+  font-size: 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: transparent;
+  border: solid 1px $color-button;
+  position: relative;
+  transform: translateX(-84px);
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  @media all and (min-width: 768px) {
+    margin-top: 173px;
+  }
+}
+
+.container {
+  padding-top: 21px;
+  padding-bottom: 10px;
+  &__main-texts {
+    border-left: solid 5px $border-left;
+    &--title {
+      text-transform: capitalize;
+      font-family: $font-principal;
+      font-weight: 600;
+      font-size: 18px;
+      color: $option1-element1;
+      padding: 0 0 0 20px;
+    }
+    &--subtitle {
+      font-family: $font-principal;
+      font-size: 16px;
+      color: $color-general-text;
+      padding: 0 0 0 20px;
+    }
+  }
+}
+
+.page {
+  border-radius: 2px;
+  width: 240px;
+  box-shadow: 0 1px 10px 0 #000000, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  background-color: $color-button;
+  @media all and (min-width: 768px) {
+    margin-bottom: 260px;
+  }
+  &__container {
+    height: 210px;
+    &--photo {
+      height: 200px;
+      width: 240px;
+      background-image: url(../images/paquita.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 62px 12px 20px;
+    &--icon {
+      height: 32px;
+      width: 32px;
+      border: solid 2px $option1-element3;
+      border-radius: 50%;
+      color: $color-form-text;
+      text-decoration: none;
+      justify-content: center;
+    }
+  }
+}
+
+.link-icon {
+  color: $color-form-text;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  &:visited {
+    color: $color-form-text;
+  }
+}
+
+.previewPhotoReset {
+  height: 200px;
+  width: 240px;
+  background-image: url(../images/paquita.png);
+  background-size: cover;
+  background-position: center;
+}
+
+//Cambio de colores al hacer selección en cada input
+.palette-1 .container__main-texts {
+  border-left-color: $option1-element2;
+}
+
+.palette-2 .container__main-texts {
+  border-left-color: $option2-element2;
+}
+
+.palette-3 .container__main-texts {
+  border-left-color: $option3-element2;
+}
+
+.palette-4 .container__main-texts {
+  border-left-color: $option4-element2;
+}
+
+.palette-1 .container__main-texts--title {
+  color: $option1-element1;
+}
+
+.palette-2 .container__main-texts--title {
+  color: $option2-element1;
+}
+
+.palette-3 .container__main-texts--title {
+  color: $option3-element1;
+}
+
+.palette-4 .container__main-texts--title {
+  color: $option4-element1;
+}
+
+.palette-1 .link-icon {
+  color: $option1-element1;
+}
+
+.palette-2 .link-icon {
+  color: $option2-element1;
+}
+
+.palette-3 .link-icon {
+  color: $option3-element1;
+}
+
+.palette-4 .link-icon {
+  color: $option4-element1;
+}
+
+.palette-1 .page__icons--icon {
+  border: solid 2px $option1-element3;
+}
+
+.palette-2 .page__icons--icon {
+  border: solid 2px $option2-element3;
+}
+
+.palette-3 .page__icons--icon {
+  border: solid 2px $option3-element3;
+}
+
+.palette-4 .page__icons--icon {
+  border: solid 2px $option4-element3;
+}
+
+.fullicon-palette {
+  background-color: $backgroundcolor-fullIcon;
+}

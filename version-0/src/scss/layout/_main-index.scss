@@ -1,0 +1,122 @@
+.main {
+  height: calc(100vh - 112px);
+  background-color: $background-main-index;
+  padding: 95px 35px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include normal-text() {
+    text-align: center;
+  }
+  @include tablet() {
+    height: calc(100vh - 62px);
+    padding-bottom: 59px;
+  }
+  &__logo {
+    &--img {
+      width: 250px;
+      height: 63px;
+      object-fit: contain;
+      @include tablet() {
+        width: 419px;
+        height: 105px;
+      }
+    }
+  }
+  &__text {
+    margin: 35.4px 0 17.8px;
+    @include tablet() {
+      margin: 31px 0 27px;
+    }
+    &--title {
+      font-family: $font-index;
+      font-size: 19.2px;
+      font-weight: 900;
+      text-align: center;
+      color: $color-h1-index;
+      @include tablet() {
+        font-size: 24px;
+      }
+    }
+    &--subtitle {
+      font-family: $font-main;
+      font-size: 12.8px;
+      font-weight: normal;
+      text-align: center;
+      color: $color-text-index;
+      @include tablet() {
+        margin: 0 218px 0 219px;
+        font-size: 16px;
+      }
+    }
+  }
+  &__articles {
+    width: 268px;
+    height: 73.8px;
+    margin-bottom: 38.6px;
+    padding: 15px 20px 9.8px 20px;
+    border-radius: 4px;
+    border: solid 1.6px #fabada;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: center;
+    @include tablet() {
+      width: 325px;
+      height: 86px;
+      padding: 15px 20px 10px;
+      margin-bottom: 0px;
+    }
+    &--text {
+      font-family: $font-main;
+      font-size: 12.8px;
+      font-weight: normal;
+      text-align: center;
+      color: $color-general-text;
+      @include tablet() {
+        font-size: 16px;
+      }
+    }
+    &--icon {
+      color: $color-accent;
+      font-size: 22.4px;
+      @include tablet() {
+        font-size: 28px;
+      }
+    }
+  }
+  &__btn {
+    margin: 0 75px 0 65px;
+    @include tablet() {
+      margin: 30px 319px 0px 320px;
+    }
+    &--link {
+      width: 129px;
+      height: 42px;
+      padding: 10px 20px;
+      border-radius: 21px;
+      background-color: $background-button-index;
+      @include tablet() {
+        padding: 10px 20.5px 10px 19.5px;
+      }
+      font-family: $font-main;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-button;
+      text-decoration: none;
+    }
+  }
+}
+
+.far {
+  width: 32px;
+  height: 26px;
+}
+
+.fas {
+  width: 25px;
+  height: 26px;
+}

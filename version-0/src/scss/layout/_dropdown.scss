@@ -1,0 +1,62 @@
+.dropdowncontainer {
+  overflow: hidden;
+  max-height: 650px;
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.changeArrow {
+  width: 16px;
+  height: 18px;
+  font-size: 18px;
+  color: $color-general-text;
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 10px;
+  @include normal-text() {
+    cursor: pointer;
+  }
+  @include tablet() {
+    margin: 10px 0 7px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__text {
+    width: 65px;
+    height: 24px;
+    margin-left: 10px;
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-general-text;
+    text-transform: uppercase;
+  }
+  &__icon {
+    width: 21px;
+    height: 18px;
+    color: $color-accent;
+    font-size: 18px;
+  }
+  &__arrow {
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+    color: $color-general-text;
+    transition: transform 0.5s linear;
+  }
+}

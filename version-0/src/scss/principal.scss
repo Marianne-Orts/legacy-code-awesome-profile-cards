@@ -1,0 +1,11 @@
+@import "./core/variables";
+@import "./core/reset";
+@import "./core/mixins";
+@import "./layout/page";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+
+.principal-body {
+  background: $gradient-main;
+}

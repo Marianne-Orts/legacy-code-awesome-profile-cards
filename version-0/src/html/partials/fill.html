@@ -1,0 +1,47 @@
+<section class="fill">
+  <div class="line-dividing--fill"></div>
+  <include src="./dropdown.html" title="Rellena" icon="far fa-keyboard dropdown__icon ">
+  </include>
+  <div class="collapsable__content hidden dropdownfillcontainer dropdowncontainer">
+    <form class="form__container jsform">
+      <div class="fill__container">
+        <label class="form__label" for="name">Nombre completo</label>
+        <input class="form__input jsname" placeholder="Ej: Paquita Salas" id="name" type="text" name="name" value="" />
+      </div>
+      <div class="fill__container">
+        <label class="form__label" for="job">Puesto</label>
+        <input placeholder="Ej: CEO PS management" class="form__input jsjob" id="job" type="text" name="job" value="" />
+      </div>
+      <div class="fill__container">
+        <label class="form__label" for="photo">Imagen de perfil</label>
+        <div class="image-form__container">
+          <div class="button">
+            <label class="button__form js-buttonForm" for="photo">Añadir imagen</label>
+          </div>
+          <input class="form__input button-image js-inputPhoto" type="file" value="" id="photo" />
+          <div class="small-image__container smallphoto js-smallPhoto"></div>
+        </div>
+      </div>
+      <div class="fill__container">
+        <label class="form__label" for="email">Email</label>
+        <input placeholder="Ej: nombre.apellidos@email.com" class="form__input jsmail" id="email" type="email"
+          name="email" value="" />
+      </div>
+      <div class="fill__container">
+        <label class="form__label" for="phone">Teléfono</label>
+        <input placeholder="Ej: 555-452-369 " class="form__input jsphone" id="phone" type="tel" name="phone" value="" />
+      </div>
+      <div class="fill__container">
+        <label class="form__label" for="linkedin">Linkedin</label>
+        <input placeholder="Ej: linkedin.com/in/paquita.salas" class="form__input jslinkedin" id="linkedin" type=""
+          name="linkedin" value="" />
+      </div>
+      <div class="fill__container">
+        <label class="form__label" for="github">Github</label>
+        <input placeholder="Ej: @paquita-salas" class="form__input jsgithub" id="github" type="" name="github"
+          value="" />
+      </div>
+    </form>
+  </div>
+  <div class="line-dividing--fill"></div>
+</section>

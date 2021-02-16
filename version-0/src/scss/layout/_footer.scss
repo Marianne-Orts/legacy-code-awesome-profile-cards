@@ -1,0 +1,42 @@
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  border: solid 1px $color-lines;
+}
+
+.footer__container {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet() {
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.copyright {
+  padding: 0 61px 12px;
+  font-family: $font-main;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  @include tablet() {
+    padding: 18px 0 22px 41px;
+  }
+}
+
+.logo {
+  height: 40px;
+  @include tablet() {
+    padding-right: 40px;
+  }
+}
