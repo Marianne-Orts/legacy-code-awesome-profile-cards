@@ -1,0 +1,726 @@
+/* Variables */
+
+// fonts
+$font-index: "Merriweather", serif;
+$font-principal: "Montserrat", sans-serif;
+$font-main: "Open Sans", sans-serif;
+// colors
+$background-main-index: #f5f5f5;
+$color-button-share: #d5d5d5;
+$color-buttons: #e17334;
+$color-h1-index: #e17334;
+$color-text-index: #114e4e;
+$color-accent: #e17334;
+$color-general-text: #54585a;
+$background-button-index: #e17334;
+$border-left: #438792;
+$color-button: #ffffff;
+$color-footer: #6b6b6b;
+$background-footer-header: #ffffff;
+$gradient-preview: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+$gradient-main: linear-gradient(to bottom, #f5f5f5, #ffffff);
+$color-form-text: #114e4e;
+$color-form-border: #a2deaf;
+$color-lines: #d8d8d8;
+$color-placeholder: #c5c5c5;
+$color-share-button-twitter: #00a0f5;
+$backgroundcolor-fullIcon: #fabadac0;
+//colors cards
+$option1-element1: #114e4e;
+$option1-element2: #438792;
+$option1-element3: #a2deaf;
+$option2-element1: #420101;
+$option2-element2: #bd1010;
+$option2-element3: #e95626;
+$option3-element1: #3e5b65;
+$option3-element2: #eab052;
+$option3-element3: #a0c0cf;
+$option4-element1: #db2763;
+$option4-element2: #fabada;
+$option4-element3: #fa9f42;
+
+/*Core REset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Mixins*/
+@mixin normal-text() {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  @content;
+}
+@mixin tablet() {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}
+
+/*Layout - page*/
+.body-index {
+  height: 100vh;
+}
+
+/*Layout-header*/
+.header {
+  background-color: $background-footer-header;
+  padding: 22px 0 22px 40px;
+  &--img {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+/*Layout - main*/
+/*layout/preview*/
+.preview {
+  height: 457px;
+  background: $gradient-preview;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media all and (min-width: 768px) {
+    height: 812px;
+    margin: 20px 40px 20px 0;
+    border-radius: 6px;
+    padding-left: 0;
+    order: 2;
+  }
+  @media all and (min-width: 1200px) {
+  }
+}
+
+.reset {
+  margin-top: 38px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  height: 30px;
+  width: 75px;
+  color: $color-general-text;
+  font-family: $font-main;
+  font-size: 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: transparent;
+  border: solid 1px $color-button;
+  position: relative;
+  transform: translateX(-84px);
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  @media all and (min-width: 768px) {
+    margin-top: 173px;
+  }
+}
+
+.container {
+  padding-top: 21px;
+  padding-bottom: 10px;
+  &__main-texts {
+    border-left: solid 5px $border-left;
+    &--title {
+      text-transform: capitalize;
+      font-family: $font-principal;
+      font-weight: 600;
+      font-size: 18px;
+      color: $option1-element1;
+      padding: 0 0 0 20px;
+    }
+    &--subtitle {
+      font-family: $font-principal;
+      font-size: 16px;
+      color: $color-general-text;
+      padding: 0 0 0 20px;
+    }
+  }
+}
+
+.page {
+  border-radius: 2px;
+  width: 240px;
+  box-shadow: 0 1px 10px 0 #000000, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  background-color: $color-button;
+  @media all and (min-width: 768px) {
+    margin-bottom: 260px;
+  }
+  &__container {
+    height: 210px;
+    &--photo {
+      height: 200px;
+      width: 240px;
+      background-image: url(../images/paquita.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 62px 12px 20px;
+    &--icon {
+      height: 32px;
+      width: 32px;
+      border: solid 2px $option1-element3;
+      border-radius: 50%;
+      color: $color-form-text;
+      text-decoration: none;
+      justify-content: center;
+    }
+  }
+}
+
+.link-icon {
+  color: $color-form-text;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  &:visited {
+    color: $color-form-text;
+  }
+}
+
+.previewPhotoReset {
+  height: 200px;
+  width: 240px;
+  background-image: url(../images/paquita.png);
+  background-size: cover;
+  background-position: center;
+}
+
+//Cambio de colores al hacer selección en cada input
+.palette-1 .container__main-texts {
+  border-left-color: $option1-element2;
+}
+
+.palette-2 .container__main-texts {
+  border-left-color: $option2-element2;
+}
+
+.palette-3 .container__main-texts {
+  border-left-color: $option3-element2;
+}
+
+.palette-4 .container__main-texts {
+  border-left-color: $option4-element2;
+}
+
+.palette-1 .container__main-texts--title {
+  color: $option1-element1;
+}
+
+.palette-2 .container__main-texts--title {
+  color: $option2-element1;
+}
+
+.palette-3 .container__main-texts--title {
+  color: $option3-element1;
+}
+
+.palette-4 .container__main-texts--title {
+  color: $option4-element1;
+}
+
+.palette-1 .link-icon {
+  color: $option1-element1;
+}
+
+.palette-2 .link-icon {
+  color: $option2-element1;
+}
+
+.palette-3 .link-icon {
+  color: $option3-element1;
+}
+
+.palette-4 .link-icon {
+  color: $option4-element1;
+}
+
+.palette-1 .page__icons--icon {
+  border: solid 2px $option1-element3;
+}
+
+.palette-2 .page__icons--icon {
+  border: solid 2px $option2-element3;
+}
+
+.palette-3 .page__icons--icon {
+  border: solid 2px $option3-element3;
+}
+
+.palette-4 .page__icons--icon {
+  border: solid 2px $option4-element3;
+}
+
+.fullicon-palette {
+  background-color: $backgroundcolor-fullIcon;
+}
+
+/*layout-design*/
+.design {
+  @include normal-text() {
+  }
+  @include tablet() {
+  }
+}
+
+.design-btn {
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+.colorcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__title {
+    width: 62px;
+    height: 19px;
+    font-family: $font-main;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $color-general-text;
+  }
+  &__Label {
+    display: flex;
+  }
+  &__option {
+    transform: translateY(50%);
+  }
+  &__palette {
+    display: flex;
+    margin-left: 10px;
+  }
+  &__square {
+    list-style-type: none;
+    width: 30px;
+    height: 25px;
+    margin-bottom: 20px;
+    &--color1-1 {
+      background-color: $option1-element1;
+    }
+    &--color1-2 {
+      background-color: $option1-element2;
+    }
+    &--color1-3 {
+      background-color: $option1-element3;
+    }
+    &--color2-1 {
+      background-color: $option2-element1;
+    }
+    &--color2-2 {
+      background-color: $option2-element2;
+    }
+    &--color2-3 {
+      background-color: $option2-element3;
+    }
+    &--color3-1 {
+      background-color: $option3-element1;
+    }
+    &--color3-2 {
+      background-color: $option3-element2;
+    }
+    &--color3-3 {
+      background-color: $option3-element3;
+    }
+    &--color4-1 {
+      background-color: $option4-element1;
+    }
+    &--color4-2 {
+      background-color: $option4-element2;
+    }
+    &--color4-3 {
+      background-color: $option4-element3;
+    }
+  }
+}
+
+/*layout-fill*/
+.fill {
+  @include normal-text() {
+  }
+}
+
+.line-dividing--fill {
+  height: 1px;
+  background-color: $color-lines;
+}
+
+.dropdownfillcontainer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px 0 30px;
+}
+
+.fill-btn {
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+.form__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fill__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;//
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form__label {
+  width: 100%;
+  color: $color-form-text;
+  font-family: $font-main;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+  margin-bottom: 7px;
+}
+
+.form__input {
+  width: 100%;
+  height: 30px;
+  padding-left: 9px;
+  border: solid 1px $color-form-border;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  line-height: 20px;
+}
+
+.image-form__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  &__form {
+    width: 140px;
+    height: 30px;
+    padding: 3px 22px 7px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    background-color: $color-buttons;
+    color: $color-button;
+    font-size: 14px;
+    font-family: $font-main;
+    border: 0;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.button-image {
+  padding-bottom: 3px 22px 7px 22px;
+  background-color: $color-accent;
+  display: none;
+}
+
+.small-image__container {
+  width: 30px;
+  height: 30px;
+  border: solid 1px $color-form-border;
+  margin: 0px 91px 0 20px;
+  background-size: cover;
+}
+
+.smallphoto {
+  background-image: url(../images/paquita.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/*layout-share*/
+.share {
+  margin-bottom: 30px;
+  @include normal-text() {
+  }
+}
+
+.share-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__create-card {
+    width: 199px;
+    height: 50px;
+    padding: 13px 18px 13px 17px;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    background-color: $color-buttons;
+    text-transform: uppercase;
+    color: $color-button;
+    font-size: 18px;
+    font-family: $font-main;
+    border: 0;
+    margin: 30px 0 30px 0;
+    transition: transform 1s ease;
+    cursor: pointer;
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+    }
+  }
+}
+
+.share-btn {
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+.share-text {
+  font-size: 18px;
+  color: $color-general-text;
+  font-family: $font-main;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.urlcard {
+  text-decoration: none;
+  color: $color-accent;
+  text-align: center;
+}
+.share-button-twitter--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-button--twitter {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: $color-share-button-twitter;
+  width: 181px;
+  height: 30px;
+  padding: 3px 9px 6px 10.5px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, -32);
+  color: $color-button;
+  font-size: 14px;
+  font-family: $font-main;
+  border: 0;
+  margin: 30px 0 30px 0;
+}
+.twitterlink {
+  text-decoration: none;
+  color: $color-button;
+}
+
+.fa-twitter {
+  width: 18px;
+  height: 18px;
+  margin: 3px 9.5px 0 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $color-button;
+}
+
+.line-dividing {
+  height: 1px;
+  background-color: $color-lines;
+  margin-top: 5px;
+}
+.share__hidden {
+  display: none;
+}
+
+.button-backgroundcolor {
+  background-color: gray;
+}
+
+.twitterhidden {
+  display: none;
+}
+
+/*layout-dropdown*/
+.dropdowncontainer {
+  overflow: hidden;
+  max-height: 650px;
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.changeArrow {
+  width: 16px;
+  height: 18px;
+  font-size: 18px;
+  color: $color-general-text;
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 10px;
+  @include normal-text() {
+    cursor: pointer;
+  }
+  @include tablet() {
+    margin: 10px 0 7px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__text {
+    width: 65px;
+    height: 24px;
+    margin-left: 10px;
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-general-text;
+    text-transform: uppercase;
+  }
+  &__icon {
+    width: 21px;
+    height: 18px;
+    color: $color-accent;
+    font-size: 18px;
+  }
+  &__arrow {
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+    color: $color-general-text;
+    transition: transform 0.5s linear;
+  }
+}
+
+.centralcolumn {
+  margin: 17px 19px 0 20px;
+  @include tablet() {
+    margin: 17px 40px 0 40px;
+  }
+}
+
+.divided {
+  background: $gradient-main;
+  @include tablet() {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-row: 1fr;
+    &__paquita {
+      grid-column: 2 / 3;
+      grid-row: span1;
+    }
+    &__options {
+      grid-column: 1 / 2;
+      grid-row: span1;
+    }
+  }
+  @include desktop() {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+.divided__options {
+  @include tablet() {
+  }
+}
+
+/*Layout-footer*/
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  border: solid 1px $color-lines;
+}
+
+.footer__container {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet() {
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.copyright {
+  padding: 0 61px 12px;
+  font-family: $font-main;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  @include tablet() {
+    padding: 18px 0 22px 41px;
+  }
+}
+
+.logo {
+  height: 40px;
+  @include tablet() {
+    padding-right: 40px;
+  }
+}
+
+.principal-body {
+  background: $gradient-main;
+}
