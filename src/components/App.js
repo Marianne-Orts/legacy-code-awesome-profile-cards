@@ -1,27 +1,32 @@
 import "../stylesheets/App.scss";
-// import Header from './Header';
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
     <div className="App">
-      <section className="header">
-        <div>
-          <div className="header__logo">
-
-            <img className="header__logo--img" src="./assets/images/logo.png" alt="Awesome profile-cards logo" />
-
-          </div>
-        </div>
-      </section>
+      <Header />
       <section className="divided">
         <div className="divided__paquita">
           <section className="preview">
-            <button className="reset js-reset"> <i className="fa fa-trash-alt" aria-hidden="true" alt="trash-can"></i> Reset</button>
+            <button className="reset js-reset">
+              {" "}
+              <i
+                className="fa fa-trash-alt"
+                aria-hidden="true"
+                alt="trash-can"
+              ></i>{" "}
+              Reset
+            </button>
             <section className="page js-card">
               <div className="container ">
                 <div className="container__main-texts ">
-                  <h2 className="container__main-texts--title jsnamepreview">Paquita Salas</h2>
-                  <h3 className="container__main-texts--subtitle jsjobpreview">CEO PS Management</h3>
+                  <h2 className="container__main-texts--title jsnamepreview">
+                    Paquita Salas
+                  </h2>
+                  <h3 className="container__main-texts--subtitle jsjobpreview">
+                    CEO PS Management
+                  </h3>
                 </div>
               </div>
               <div className="Page__container">
@@ -30,26 +35,44 @@ function App() {
               <section className="page__icons">
                 <div className="page__icons--icon icon-phone">
                   <a href="" className="link-icon jsphonelink" target="_blank">
-                    <i className="fas fa-mobile-alt link" aria-hidden="true" alt="icon-phone"></i>
+                    <i
+                      className="fas fa-mobile-alt link"
+                      aria-hidden="true"
+                      alt="icon-phone"
+                    ></i>
                   </a>
                 </div>
                 <div className="page__icons--icon icon-mail ">
                   <a href="" className="link-icon jsmaillink">
-                    <i className="far fa-envelope link" aria-hidden="true" alt="icon-mail"></i>
+                    <i
+                      className="far fa-envelope link"
+                      aria-hidden="true"
+                      alt="icon-mail"
+                    ></i>
                   </a>
                 </div>
                 <div className="page__icons--icon icon-linkedin">
-                  <a href="" className="link-icon jslinkedinlink" target="_blank">
-                    <i className="fab fa-linkedin-in link" aria-hidden="true" alt="icon-linkedin"></i>
+                  <a
+                    href=""
+                    className="link-icon jslinkedinlink"
+                    target="_blank"
+                  >
+                    <i
+                      className="fab fa-linkedin-in link"
+                      aria-hidden="true"
+                      alt="icon-linkedin"
+                    ></i>
                   </a>
                 </div>
 
                 <div className="page__icons--icon icon-github">
                   <span className="page__icons--circle"></span>
                   <a href="" className="link-icon jsgithublink" target="_blank">
-                    <i className="fab fa-github-alt link" aria-hidden="true" alt="icon-github"></i>
-
-
+                    <i
+                      className="fab fa-github-alt link"
+                      aria-hidden="true"
+                      alt="icon-github"
+                    ></i>
                   </a>
                 </div>
               </section>
@@ -69,7 +92,13 @@ function App() {
               <h3 className="colorcontainer__title">Colores</h3>
               <div className="colorcontainer__colors">
                 <label className="colorcontainer__Label">
-                  <input className="colorcontainer__option js-input1 js-palette" type="radio" name="palette" checked="" value="1" />
+                  <input
+                    className="colorcontainer__option js-input1 js-palette"
+                    type="radio"
+                    name="palette"
+                    checked=""
+                    value="1"
+                  />
                   <ul className="colorcontainer__palette palette-1">
                     <li className="colorcontainer__square colorcontainer__square--color1-1"></li>
                     <li className="colorcontainer__square colorcontainer__square--color1-2"></li>
@@ -78,7 +107,12 @@ function App() {
                 </label>
 
                 <label className="colorcontainer__Label">
-                  <input className="colorcontainer__option js-palette" type="radio" name="palette" value="2" />
+                  <input
+                    className="colorcontainer__option js-palette"
+                    type="radio"
+                    name="palette"
+                    value="2"
+                  />
                   <ul className="colorcontainer__palette palette-2">
                     <li className="colorcontainer__square colorcontainer__square--color2-1"></li>
                     <li className="colorcontainer__square colorcontainer__square--color2-2"></li>
@@ -87,7 +121,12 @@ function App() {
                 </label>
 
                 <label className="colorcontainer__Label">
-                  <input className="colorcontainer__option js-palette" type="radio" name="palette" value="3" />
+                  <input
+                    className="colorcontainer__option js-palette"
+                    type="radio"
+                    name="palette"
+                    value="3"
+                  />
                   <ul className="colorcontainer__palette palette-3">
                     <li className="colorcontainer__square colorcontainer__square--color3-1"></li>
                     <li className="colorcontainer__square colorcontainer__square--color3-2"></li>
@@ -95,7 +134,12 @@ function App() {
                   </ul>
                 </label>
                 <label className="colorcontainer__Label">
-                  <input className="colorcontainer__option js-palette" type="radio" name="palette" value="4" />
+                  <input
+                    className="colorcontainer__option js-palette"
+                    type="radio"
+                    name="palette"
+                    value="4"
+                  />
                   <ul className="colorcontainer__palette palette-4">
                     <li className="colorcontainer__square colorcontainer__square--color4-1"></li>
                     <li className="colorcontainer__square colorcontainer__square--color4-2"></li>
@@ -118,38 +162,101 @@ function App() {
             <div className="collapsable__content hidden dropdownfillcontainer dropdowncontainer">
               <form className="form__container jsform">
                 <div className="fill__container">
-                  <label className="form__label" for="name">Nombre completo</label>
-                  <input className="form__input jsname" placeholder="Ej: Paquita Salas" id="name" type="text" name="name" value="" />
+                  <label className="form__label" for="name">
+                    Nombre completo
+                  </label>
+                  <input
+                    className="form__input jsname"
+                    placeholder="Ej: Paquita Salas"
+                    id="name"
+                    type="text"
+                    name="name"
+                    value=""
+                  />
                 </div>
                 <div className="fill__container">
-                  <label className="form__label" for="job">Puesto</label>
-                  <input placeholder="Ej: CEO PS management" className="form__input jsjob" id="job" type="text" name="job" value="" />
+                  <label className="form__label" for="job">
+                    Puesto
+                  </label>
+                  <input
+                    placeholder="Ej: CEO PS management"
+                    className="form__input jsjob"
+                    id="job"
+                    type="text"
+                    name="job"
+                    value=""
+                  />
                 </div>
                 <div className="fill__container">
-                  <label className="form__label" for="photo">Imagen de perfil</label>
+                  <label className="form__label" for="photo">
+                    Imagen de perfil
+                  </label>
                   <div className="image-form__container">
                     <div className="button">
-                      <label className="button__form js-buttonForm" for="photo">Añadir imagen</label>
+                      <label className="button__form js-buttonForm" for="photo">
+                        Añadir imagen
+                      </label>
                     </div>
-                    <input className="form__input button-image js-inputPhoto" type="file" value="" id="photo" />
+                    <input
+                      className="form__input button-image js-inputPhoto"
+                      type="file"
+                      value=""
+                      id="photo"
+                    />
                     <div className="small-image__container smallphoto js-smallPhoto"></div>
                   </div>
                 </div>
                 <div className="fill__container">
-                  <label className="form__label" for="email">Email</label>
-                  <input placeholder="Ej: nombre.apellidos@email.com" className="form__input jsmail" id="email" type="email" name="email" value="" />
+                  <label className="form__label" for="email">
+                    Email
+                  </label>
+                  <input
+                    placeholder="Ej: nombre.apellidos@email.com"
+                    className="form__input jsmail"
+                    id="email"
+                    type="email"
+                    name="email"
+                    value=""
+                  />
                 </div>
                 <div className="fill__container">
-                  <label className="form__label" for="phone">Teléfono</label>
-                  <input placeholder="Ej: 555-452-369 " className="form__input jsphone" id="phone" type="tel" name="phone" value="" />
+                  <label className="form__label" for="phone">
+                    Teléfono
+                  </label>
+                  <input
+                    placeholder="Ej: 555-452-369 "
+                    className="form__input jsphone"
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    value=""
+                  />
                 </div>
                 <div className="fill__container">
-                  <label className="form__label" for="linkedin">Linkedin</label>
-                  <input placeholder="Ej: linkedin.com/in/paquita.salas" className="form__input jslinkedin" id="linkedin" type="" name="linkedin" value="" />
+                  <label className="form__label" for="linkedin">
+                    Linkedin
+                  </label>
+                  <input
+                    placeholder="Ej: linkedin.com/in/paquita.salas"
+                    className="form__input jslinkedin"
+                    id="linkedin"
+                    type=""
+                    name="linkedin"
+                    value=""
+                  />
                 </div>
                 <div className="fill__container">
-                  <label className="form__label" for="github">Github</label>
-                  <input placeholder="Ej: @paquita-salas" className="form__input jsgithub" id="github" type="" name="github" value="" />
+                  <label className="form__label" for="github">
+                    Github
+                  </label>
+                  <input
+                    placeholder="Ej: @paquita-salas"
+                    className="form__input jsgithub"
+                    id="github"
+                    type=""
+                    name="github"
+                    value=""
+                  />
                 </div>
               </form>
             </div>
@@ -165,14 +272,22 @@ function App() {
             </div>
             <div className="share-button hidden dropdownsharecontainer dropdowncontainer">
               <button className="share-button__create-card jssharebtn">
-                <i className="far fa-address-card share__create card"></i> Crear tarjeta
-            </button>
+                <i className="far fa-address-card share__create card"></i> Crear
+                tarjeta
+              </button>
               <div className="share__hidden jssharelinks">
                 <p className="share-text jsShareText"></p>
                 <a href="" className="jsUrl urlcard" target="_blank"></a>
                 <div className="share-button-twitter--container">
                   <button className="twitterhidden share-button--twitter jstwitterbutton">
-                    <a href="" className="jsTwitter twitterlink" target="_blank"> Compartir en twitter</a>
+                    <a
+                      href=""
+                      className="jsTwitter twitterlink"
+                      target="_blank"
+                    >
+                      {" "}
+                      Compartir en twitter
+                    </a>
                     <i className="fab fa-twitter"></i>
                   </button>
                 </div>
@@ -182,14 +297,7 @@ function App() {
           </section>
         </div>
       </section>
-      <footer className="footer">
-        <div className="footer__container">
-          <small className="copyright"> PS Management profile-card © 2021 </small>
-          <a className="logo__container" href="https://adalab.es/" target="_blank" title="Adalab Home">
-            <img className="logo" src="./assets/images/logo-adalab.png" alt="logo adalab" title="logo adalab" />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
