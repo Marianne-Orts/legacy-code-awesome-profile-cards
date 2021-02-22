@@ -1,6 +1,6 @@
 import Collapsable from "./Collapsable";
 import Palettes from "./Palettes";
-import Inputs from "./Inputs";
+import InputList from "./InputList";
 import GetAvatar from "./GetAvatar";
 import Share from "./Share";
 
@@ -15,9 +15,8 @@ function Form() {
       <section className="fill">
         <div className="line-dividing--fill"></div>
         <Collapsable />
-        <Inputs />
+        <InputList />
         <GetAvatar />
-        <Inputs />
 
         <div className="line-dividing--fill"></div>
       </section>
