@@ -1,4 +1,3 @@
-import Collapsable from "./Collapsable";
 import Palettes from "./Palettes";
 import InputList from "./InputList";
 import GetAvatar from "./GetAvatar";
