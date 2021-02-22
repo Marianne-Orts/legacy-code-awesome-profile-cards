@@ -1,6 +1,6 @@
 import Input from "./Input";
 
-function Inputs() {
+function InputList() {
   return (
     <div className="collapsable__content hidden dropdownfillcontainer dropdowncontainer">
       <form className="form__container jsform">
@@ -42,4 +42,4 @@ function Inputs() {
   );
 }
 
-export default Inputs;
+export default InputList;
