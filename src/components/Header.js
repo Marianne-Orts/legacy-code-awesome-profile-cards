@@ -1,4 +1,5 @@
 import logoHeader from "../images/logo.png";
+import "./Header.scss";
 
 function Header() {
   return (
