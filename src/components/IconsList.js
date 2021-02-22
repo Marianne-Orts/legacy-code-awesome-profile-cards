@@ -1,4 +1,6 @@
-function Icons() {
+import Icon from "./Icon";
+
+function IconsList() {
   return (
     <section className="page__icons">
       <div className="page__icons--icon icon-phone">
@@ -42,4 +44,4 @@ function Icons() {
     </section>
   );
 }
-export default Icons;
+export default IconsList;

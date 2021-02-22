@@ -1,6 +1,7 @@
 import PreviewCard from "./PreviewCard";
 import Reset from "./Reset";
-import Icons from "./Icons";
+
+import IconsList from "./IconsList";
 
 function Preview() {
   return (
@@ -9,7 +10,7 @@ function Preview() {
         <Reset />
         <section className="page js-card">
           <PreviewCard />
-          <Icons />
+          <IconsList />
         </section>
       </section>
     </div>
