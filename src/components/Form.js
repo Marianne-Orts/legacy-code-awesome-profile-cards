@@ -10,10 +10,10 @@ function Form() {
       <section className="design">
         <Collapsable />
         <Palettes />
+        <div className="line-dividing--fill"></div>
       </section>
 
       <section className="fill">
-        <div className="line-dividing--fill"></div>
         <Collapsable />
         <InputList />
         <GetAvatar />
