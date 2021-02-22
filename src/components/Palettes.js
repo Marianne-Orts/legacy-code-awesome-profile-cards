@@ -63,4 +63,7 @@ function Palettes() {
   );
 }
 
+/* Palettes.defaultProps = {
+  props : "Palette 1",
+};  */
 export default Palettes;
