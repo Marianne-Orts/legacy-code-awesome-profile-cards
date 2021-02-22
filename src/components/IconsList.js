@@ -3,44 +3,28 @@ import Icon from "./Icon";
 function IconsList() {
   return (
     <section className="page__icons">
-      <div className="page__icons--icon icon-phone">
-        <a href="" className="link-icon jsphonelink" target="_blank">
-          <i
-            className="fas fa-mobile-alt link"
-            aria-hidden="true"
-            alt="icon-phone"
-          ></i>
-        </a>
-      </div>
-      <div className="page__icons--icon icon-mail ">
-        <a href="" className="link-icon jsmaillink">
-          <i
-            className="far fa-envelope link"
-            aria-hidden="true"
-            alt="icon-mail"
-          ></i>
-        </a>
-      </div>
-      <div className="page__icons--icon icon-linkedin">
-        <a href="" className="link-icon jslinkedinlink" target="_blank">
-          <i
-            className="fab fa-linkedin-in link"
-            aria-hidden="true"
-            alt="icon-linkedin"
-          ></i>
-        </a>
-      </div>
+      <Icon
+        icon={"icon-phone"}
+        iconLink={"fas fa-mobile-alt link"}
+        alt={"icon-phone"}
+      />
+      <Icon
+        icon={"icon-mail"}
+        iconLink={"far fa-envelope link"}
+        alt={"icon-mail"}
+      />
 
-      <div className="page__icons--icon icon-github">
-        <span className="page__icons--circle"></span>
-        <a href="" className="link-icon jsgithublink" target="_blank">
-          <i
-            className="fab fa-github-alt link"
-            aria-hidden="true"
-            alt="icon-github"
-          ></i>
-        </a>
-      </div>
+      <Icon
+        icon={"icon-linkedin"}
+        iconLink={"fab fa-linkedin-in link"}
+        alt={"icon-linkedin"}
+      />
+
+      <Icon
+        icon={"icon-github"}
+        iconLink={"fab fa-github-alt link"}
+        alt={"icon-github"}
+      />
     </section>
   );
 }
