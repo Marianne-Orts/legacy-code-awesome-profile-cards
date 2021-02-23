@@ -3,8 +3,7 @@ function Collapsable(props) {
     <div className="dropdown js-dropdown-header" shareBtn={props.shareBtn}>
       <div className="dropdown__title">
         <span
-          className="dropdown__icon dropdown__icon--left"
-          iconCollapsable={props.iconCollapsable}
+          className={`dropdown__icon dropdown__icon--left ${props.iconCollapsable}`}
         ></span>
         <h2 className="dropdown__text">{props.title}</h2>
       </div>

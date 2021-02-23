@@ -1,6 +1,6 @@
-function Palettes() {
+function Palettes(props) {
   return (
-    <div className="colorcontainer hidden dropdowncontainer">
+    <div className={"colorcontainer dropdowncontainer " + props.hidden}>
       <h3 className="colorcontainer__title">Colores</h3>
       <div className="colorcontainer__colors">
         <label className="colorcontainer__Label">

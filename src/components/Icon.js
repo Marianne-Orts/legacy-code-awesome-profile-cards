@@ -1,6 +1,6 @@
 function Icon(props) {
   return (
-    <div className="page__icons--icon" icon={props.icon}>
+    <div className={"page__icons--icon " + props.icon}>
       <a href="" className="link-icon" target={props.target}>
         <i iconLink={props.iconLink} aria-hidden="true" alt={props.alt}></i>
       </a>
