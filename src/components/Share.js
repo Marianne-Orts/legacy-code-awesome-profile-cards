@@ -1,6 +1,10 @@
-function Share() {
+function Share(props) {
   return (
-    <div className="share-button hidden dropdownsharecontainer dropdowncontainer">
+    <div
+      className={
+        "share-button  dropdownsharecontainer dropdowncontainer " + props.hidden
+      }
+    >
       <button className="share-button__create-card jssharebtn">
         <i className="far fa-address-card share__create card"></i> Crear tarjeta
       </button>

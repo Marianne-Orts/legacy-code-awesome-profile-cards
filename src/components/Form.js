@@ -21,7 +21,7 @@ function Form() {
           iconCollapsable={"far fa-keyboard dropdown__icon"}
           title={"Rellena"}
         />
-        <InputList />
+        <InputList hidden="" />
         <GetAvatar />
 
         <div className="line-dividing--fill"></div>
@@ -32,7 +32,7 @@ function Form() {
           iconCollapsable={"fas fa-share-alt"}
           title={"Comparte"}
         />
-        <Share />
+        <Share hidden="" />
         <div className="line-dividing"></div>
       </section>
     </div>

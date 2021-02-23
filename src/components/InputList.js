@@ -1,8 +1,13 @@
 import Input from "./Input";
 
-function InputList() {
+function InputList(props) {
   return (
-    <div className="collapsable__content hidden dropdownfillcontainer dropdowncontainer">
+    <div
+      className={
+        "collapsable__content dropdownfillcontainer dropdowncontainer " +
+        props.hidden
+      }
+    >
       <form className="form__container jsform">
         <Input
           id={"name"}
