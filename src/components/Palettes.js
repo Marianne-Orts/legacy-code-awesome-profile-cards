@@ -1,4 +1,10 @@
+import React, { useState } from "react";
 function Palettes(props) {
+  /* const [colorPalettes, setColorPalettes] = useState("1");
+  const handlePalettes= event => {
+    setColorPalettes(event.currentTarget.value);
+  }; */
+
   return (
     <div className={"colorcontainer dropdowncontainer " + props.hidden}>
       <h3 className="colorcontainer__title">Colores</h3>
@@ -10,6 +16,7 @@ function Palettes(props) {
             name="palette"
             checked=""
             value="1"
+            /* onChange={handlePalettes} */
           />
           <ul className="colorcontainer__palette palette-1">
             <li className="colorcontainer__square colorcontainer__square--color1-1"></li>
@@ -24,6 +31,7 @@ function Palettes(props) {
             type="radio"
             name="palette"
             value="2"
+            /* onChange={handlePalettes} */
           />
           <ul className="colorcontainer__palette palette-2">
             <li className="colorcontainer__square colorcontainer__square--color2-1"></li>
@@ -38,6 +46,7 @@ function Palettes(props) {
             type="radio"
             name="palette"
             value="3"
+            /* onChange={handlePalettes} */
           />
           <ul className="colorcontainer__palette palette-3">
             <li className="colorcontainer__square colorcontainer__square--color3-1"></li>
@@ -51,6 +60,7 @@ function Palettes(props) {
             type="radio"
             name="palette"
             value="4"
+            /* onChange={handlePalettes} */
           />
           <ul className="colorcontainer__palette palette-4">
             <li className="colorcontainer__square colorcontainer__square--color4-1"></li>

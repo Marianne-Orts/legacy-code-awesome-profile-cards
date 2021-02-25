@@ -17,7 +17,7 @@ function PreviewCard() {
     </>
   );
 }
- /* PreviewCard.defaultProps = {
+/* PreviewCard.defaultProps = {
   props : "Paquita Salas",
    props : "CEO PS Management",
   props : "previewPhoto"
