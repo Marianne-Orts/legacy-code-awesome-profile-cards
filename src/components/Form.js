@@ -5,7 +5,7 @@ import GetAvatar from "./GetAvatar";
 import Share from "./Share";
 import Collapsable from "./Collapsable";
 
-function Form() {
+function Form(props) {
   const [clasePalettes, setClasePalettes] = useState(""); //valor incial
   const funcionPalettes = () => {
     if (clasePalettes === "") {
@@ -39,7 +39,10 @@ function Form() {
           title={"Diseña"}
           funcion={funcionPalettes}
         />
-        <Palettes hidden={clasePalettes} />
+        <Palettes
+          hidden={clasePalettes}
+          handlePalettesWithLifting={props.handlePalettesWithLifting}
+        />
         <div className="line-dividing--fill"></div>
       </section>
 
