@@ -1,6 +1,6 @@
 import IconsList from "./IconsList";
 
-function Preview() {
+function Preview(props) {
   return (
     <div className="divided__paquita">
       <section className="preview">
@@ -9,7 +9,7 @@ function Preview() {
           Reset
         </button>
         <section className="page js-card">
-          <div className="container ">
+          <div className={`container ${props.palettesColor}`}>
             <div className={`container__main-texts ${props.clasePalettes}`}>
               <h2 className="container__main-texts--title jsnamepreview">
                 Paquita Salas
