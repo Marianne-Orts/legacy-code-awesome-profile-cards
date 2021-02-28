@@ -1,4 +1,12 @@
 function Input(props) {
+
+  const handleInputChange = (ev) => {
+    props.handleInput({
+      inputName: ev.target.name,
+      inputValue: ev.target.value,
+    })
+  }
+
   return (
     <div className="fill__container">
       <label className="form__label" for={props.id}>
@@ -10,7 +18,8 @@ function Input(props) {
         id={props.id}
         type={props.type}
         name={props.id}
-        value=""
+        value={props.value}
+        onChange={handleInputChange}
       />
     </div>
   );

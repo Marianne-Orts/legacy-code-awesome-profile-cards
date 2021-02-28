@@ -5,7 +5,7 @@ import GetAvatar from "./GetAvatar";
 import Share from "./Share";
 import Collapsable from "./Collapsable";
 
-function Form() {
+function Form(props) {
   const [clasePalettes, setClasePalettes] = useState(""); //valor incial
   const funcionPalettes = () => {
     if (clasePalettes === "") {
@@ -49,7 +49,7 @@ function Form() {
           title={"Rellena"}
           funcion={funcionInputs}
         />
-        <InputList hidden="" />
+        <InputList hidden="" handleInput={props.handleInput} data={props.data} />
         <GetAvatar />
 
         <div className="line-dividing--fill"></div>

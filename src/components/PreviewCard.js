@@ -1,13 +1,13 @@
-function PreviewCard() {
+function PreviewCard(props) {
   return (
     <>
       <div className="container ">
         <div className="container__main-texts ">
           <h2 className="container__main-texts--title jsnamepreview">
-            Paquita Salas
+            {props.data.name || 'Paquita Salas'}
           </h2>
           <h3 className="container__main-texts--subtitle jsjobpreview">
-            CEO PS Management
+            {props.data.job || 'CEO PS Managment'}
           </h3>
         </div>
       </div>
