@@ -6,21 +6,20 @@ import Form from "./Form";
 import Preview from "./Preview";
 
 function App() {
-
-  const [data, setData] = useState('');
+  const [data, setData] = useState("");
 
   const handleInput = (data) => {
-    setData({
-      [data.inputName]: data.inputValue
-    })
-  }
+    setData((prevState) => {
+      return { ...prevState, [data.inputName]: data.inputValue };
+    });
+  };
 
   const handleReset = () => {
     setData({
-      [data.inputName]: '',
-      [data.inputValue]: ''
-    })
-  }
+      [data.inputName]: "",
+      [data.inputValue]: "",
+    });
+  };
 
   return (
     <div className="App">

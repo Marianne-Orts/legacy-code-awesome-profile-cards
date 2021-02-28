@@ -1,4 +1,4 @@
-gti chimport Input from "./Input";
+import Input from "./Input";
 
 function InputList(props) {
   return (
