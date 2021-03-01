@@ -6,14 +6,36 @@ import Form from "./Form";
 import Preview from "./Preview";
 
 function App() {
-
-  const [data, setData] = useState('');
+  const [data, setData] = useState(
+    {
+      palette: 1,
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      likedin: "",
+      github: "",
+      photo: ""
+    }
+  );
+  const [palettesWithLifting, setPalettesWithLifting] = useState("");
+  const handlePalettesWithLifting = (palettesValue) => {
+    console.log("Has seleccionado la paleta ", palettesValue);
+    //setPalettesWithLifting(palettesValue);
+    //data.palette=palettesValue; NO VALE
+    setData(
+      {
+        ...data,
+        palette: palettesValue,
+      }
+    );
+  };
 
   const handleInput = (data) => {
-    setData({
-      [data.inputName]: data.inputValue
-    })
-  }
+    setData((prevState) => {
+      return { ...prevState, [data.inputName]: data.inputValue };
+    });
+  };
 
   const handleReset = () => {
     setData({
@@ -31,10 +53,12 @@ function App() {
       <Header />
       <section className="divided">
         <Preview data={data} handleReset={handleReset} />
-        <Form data={data} handleInput={handleInput} handleReset={handleReset} />
+        <Form data={data} handleInput={handleInput} handleReset={handleReset}
+          palettesWithLifting={palettesWithLifting}
+          handlePalettesWithLifting={handlePalettesWithLifting} />
       </section>
       <Footer />
-    </div>
+    </div >
   );
 }
 

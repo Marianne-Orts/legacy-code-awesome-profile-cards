@@ -39,7 +39,10 @@ function Form(props) {
           title={"Diseña"}
           funcion={funcionPalettes}
         />
-        <Palettes hidden={clasePalettes} />
+        <Palettes
+          hidden={clasePalettes}
+          handlePalettesWithLifting={props.handlePalettesWithLifting}
+        />
         <div className="line-dividing--fill"></div>
       </section>
 
