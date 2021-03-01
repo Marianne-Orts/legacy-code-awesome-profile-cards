@@ -14,7 +14,7 @@ function Palettes(props) {
             className="colorcontainer__option js-input1 js-palette"
             type="radio"
             name="palette"
-            //checked=""
+            //checked
             value="1"
             onChange={handlePalettes}
           />
@@ -60,7 +60,7 @@ function Palettes(props) {
             type="radio"
             name="palette"
             value="4"
-            /* onChange={handlePalettes} */
+            onChange={handlePalettes}
           />
           <ul className="colorcontainer__palette palette-4">
             <li className="colorcontainer__square colorcontainer__square--color4-1"></li>

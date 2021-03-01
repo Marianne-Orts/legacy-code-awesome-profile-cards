@@ -6,29 +6,25 @@ import Form from "./Form";
 import Preview from "./Preview";
 
 function App() {
-  const [data, setData] = useState(
-    {
-      palette: 1,
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      likedin: "",
-      github: "",
-      photo: ""
-    }
-  );
+  const [data, setData] = useState({
+    palette: "1",
+    name: "",
+    job: "",
+    phone: "",
+    email: "",
+    likedin: "",
+    github: "",
+    photo: "",
+  });
   const [palettesWithLifting, setPalettesWithLifting] = useState("");
   const handlePalettesWithLifting = (palettesValue) => {
     console.log("Has seleccionado la paleta ", palettesValue);
     //setPalettesWithLifting(palettesValue);
     //data.palette=palettesValue; NO VALE
-    setData(
-      {
-        ...data,
-        palette: palettesValue,
-      }
-    );
+    setData({
+      ...data,
+      palette: palettesValue,
+    });
   };
 
   const handleInput = (data) => {
@@ -39,26 +35,30 @@ function App() {
 
   const handleReset = () => {
     setData({
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: ''
-    })
-  }
+      name: "",
+      job: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+    });
+  };
 
   return (
     <div className="App">
       <Header />
       <section className="divided">
         <Preview data={data} handleReset={handleReset} />
-        <Form data={data} handleInput={handleInput} handleReset={handleReset}
+        <Form
+          data={data}
+          handleInput={handleInput}
+          handleReset={handleReset}
           palettesWithLifting={palettesWithLifting}
-          handlePalettesWithLifting={handlePalettesWithLifting} />
+          handlePalettesWithLifting={handlePalettesWithLifting}
+        />
       </section>
       <Footer />
-    </div >
+    </div>
   );
 }
 
