@@ -1,10 +1,9 @@
 import "./App.scss";
-
+import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import Preview from "./Preview";
-import { useState } from "react";
 
 function App() {
   const [data, setData] = useState(
@@ -32,29 +31,30 @@ function App() {
     );
   };
 
-  const [palettesColor, setPalettesColor] = useState("");
-  const changePalettesColor = () => {
-    if (palettesWithLifting === "2") {
-      setPalettesColor("palette-2 container__main-texts");
-    }
+  const handleInput = (data) => {
+    setData((prevState) => {
+      return { ...prevState, [data.inputName]: data.inputValue };
+    });
+  };
+
+  const handleReset = () => {
+    setData({
+      [data.inputName]: "",
+      [data.inputValue]: "",
+    });
   };
 
   return (
     <div className="App">
       <Header />
       <section className="divided">
-        <Preview
-          data={data}
-          palettesColor={palettesColor}
-          changePalettesColor={changePalettesColor}
-        />
-        <Form
+        <Preview data={data} handleReset={handleReset} />
+        <Form data={data} handleInput={handleInput} handleReset={handleReset}
           palettesWithLifting={palettesWithLifting}
-          handlePalettesWithLifting={handlePalettesWithLifting}
-        />
+          handlePalettesWithLifting={handlePalettesWithLifting} />
       </section>
       <Footer />
-    </div>
+    </div >
   );
 }
 

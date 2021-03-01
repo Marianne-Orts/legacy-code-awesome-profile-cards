@@ -20,3 +20,10 @@ function updatePalette() {
 for (const paletteElement of paletteElements) {
   paletteElement.addEventListener("change", updatePalette);
 }
+
+const updatePalettes = (event) => {
+  handleClick;
+};
+const paletteValue;
+handleClick = (event) =>
+  event.target.classList.add(`"palette-"${paletteValue}`);
