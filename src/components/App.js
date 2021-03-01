@@ -17,8 +17,12 @@ function App() {
 
   const handleReset = () => {
     setData({
-      [data.inputName]: '',
-      [data.inputValue]: ''
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: ''
     })
   }
 
