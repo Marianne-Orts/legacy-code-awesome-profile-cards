@@ -6,39 +6,40 @@ import Footer from "./Footer";
 
 function Landing() {
   return (
-    <div class="body-index">
-      <main class="main">
-        <div class="main__logo">
+    <div className="body-index">
+      <main className="main">
+        <div className="main__logo">
           <img
-            class="main__logo--img"
+            className="main__logo--img"
             src={logoHeader}
             alt="Logo PS-Management"
             title="Logo PS-Management"
           />
         </div>
-        <div class="main__text">
-          <h1 class="main__text--title">Crea tu tarjeta de visita</h1>
-          <p class="main__text--subtitle">
+        <div className="main__text">
+          <h1 className="main__text--title">Crea tu tarjeta de visita</h1>
+          <p className="main__text--subtitle">
             Crea mejores contactos profesionales de forma fácil y cómoda
           </p>
         </div>
-        <div class="main__articles">
-          <article class="main__articles--design">
-            <i class="far fa-object-ungroup main__articles--icon"></i>
-            <p class="main__articles--text">Diseña</p>
+        <div className="main__articles">
+          <article className="main__articles--design">
+            <i className="far fa-object-ungroup main__articles--icon"></i>
+            <p className="main__articles--text">Diseña</p>
           </article>
-          <article class="main__articles--fill">
-            <i class="far fa-keyboard main__articles--icon"></i>
-            <p class="main__articles--text">Rellena</p>
+          <article className="main__articles--fill">
+            <i className="far fa-keyboard main__articles--icon"></i>
+            <p className="main__articles--text">Rellena</p>
           </article>
-          <article class="main__articles--share">
-            <i class="fas fa-share-alt main__articles--icon"></i>
-            <p class="main__articles--text">Comparte</p>
+          <article className="main__articles--share">
+            <i className="fas fa-share-alt main__articles--icon"></i>
+            <p className="main__articles--text">Comparte</p>
           </article>
         </div>
-        <div class="main__btn js-startbtn">
+        <div className="main__btn js-startbtn">
           <Link
-            class="main__btn--link"
+            to="/CardGenerator"
+            className="main__btn--link"
             href="./principal.html"
             title="Go to profile card design"
           >
