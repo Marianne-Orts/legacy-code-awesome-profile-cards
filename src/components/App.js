@@ -7,10 +7,29 @@ import Preview from "./Preview";
 import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState(
+    {
+      palette: 1,
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      likedin: "",
+      github: "",
+      photo: ""
+    }
+  );
   const [palettesWithLifting, setPalettesWithLifting] = useState("");
   const handlePalettesWithLifting = (palettesValue) => {
     console.log("Has seleccionado la paleta ", palettesValue);
-    setPalettesWithLifting(palettesValue);
+    //setPalettesWithLifting(palettesValue);
+    //data.palette=palettesValue; NO VALE
+    setData(
+      {
+        ...data,
+        palette: palettesValue,
+      }
+    );
   };
 
   const [palettesColor, setPalettesColor] = useState("");
@@ -25,6 +44,7 @@ function App() {
       <Header />
       <section className="divided">
         <Preview
+          data={data}
           palettesColor={palettesColor}
           changePalettesColor={changePalettesColor}
         />

@@ -1,6 +1,9 @@
 import IconsList from "./IconsList";
 
 function Preview(props) {
+  console.log("Preview -> props", props);
+  const clasePalettes = `palette-${props.data.palette}`;
+
   return (
     <div className="divided__paquita">
       <section className="preview">
@@ -10,7 +13,7 @@ function Preview(props) {
         </button>
         <section className="page js-card">
           <div className={`container ${props.palettesColor}`}>
-            <div className={`container__main-texts ${props.clasePalettes}`}>
+            <div className={`container__main-texts ${clasePalettes}`}>
               <h2 className="container__main-texts--title jsnamepreview">
                 Paquita Salas
               </h2>
