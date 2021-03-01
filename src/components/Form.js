@@ -49,7 +49,11 @@ function Form(props) {
           title={"Rellena"}
           funcion={funcionInputs}
         />
-        <InputList hidden="" handleInput={props.handleInput} data={props.data} />
+        <InputList
+          hidden={claseInputs}
+          handleInput={props.handleInput}
+          data={props.data}
+        />
         <GetAvatar />
 
         <div className="line-dividing--fill"></div>
@@ -61,7 +65,7 @@ function Form(props) {
           title={"Comparte"}
           funcion={funcionShare}
         />
-        <Share hidden="" />
+        <Share hidden={claseShare} />
         <div className="line-dividing"></div>
       </section>
     </div>
