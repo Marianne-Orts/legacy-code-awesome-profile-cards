@@ -33,12 +33,14 @@ function Preview(props) {
               iconLink={"fas fa-mobile-alt link"}
               alt={"icon-phone"}
               palette={clasePalettes}
+              href={props.data.phone}
             />
             <Icon
               icon={"icon-mail"}
               iconLink={"far fa-envelope link"}
               alt={"icon-mail"}
               palette={clasePalettes}
+              href={"mailto:" + props.data.email}
             />
 
             <Icon
@@ -46,6 +48,7 @@ function Preview(props) {
               iconLink={"fab fa-linkedin-in link"}
               alt={"icon-linkedin"}
               palette={clasePalettes}
+              href={props.data.linkedin}
             />
 
             <Icon
@@ -53,6 +56,7 @@ function Preview(props) {
               iconLink={"fab fa-github-alt link"}
               alt={"icon-github"}
               palette={clasePalettes}
+              href={props.data.github}
             />
           </section>
         </section>

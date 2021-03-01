@@ -12,7 +12,7 @@ function App() {
     job: "",
     phone: "",
     email: "",
-    likedin: "",
+    linkedin: "",
     github: "",
     photo: "",
   });
