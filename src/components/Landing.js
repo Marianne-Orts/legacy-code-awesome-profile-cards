@@ -24,15 +24,15 @@ function Landing() {
         </div>
         <div className="main__articles">
           <article className="main__articles--design">
-            <i className="far fa-object-ungroup main__articles--icon"></i>
+            <i className="far fa-object-ungroup fardesign main__articles--icon"></i>
             <p className="main__articles--text">Diseña</p>
           </article>
           <article className="main__articles--fill">
-            <i className="far fa-keyboard main__articles--icon"></i>
+            <i className="far fa-keyboard fardesign main__articles--icon"></i>
             <p className="main__articles--text">Rellena</p>
           </article>
           <article className="main__articles--share">
-            <i className="fas fa-share-alt main__articles--icon"></i>
+            <i className="fas fa-share-alt fardesign1 main__articles--icon"></i>
             <p className="main__articles--text">Comparte</p>
           </article>
         </div>
