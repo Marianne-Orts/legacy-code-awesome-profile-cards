@@ -1,25 +1,77 @@
-function GetAvatar() {
-  return (
-    <div className="fill__container">
-      <label className="form__label" for="photo">
-        Imagen de perfil
-      </label>
-      <div className="image-form__container">
-        <div className="button">
-          <label className="button__form js-buttonForm" for="photo">
-            Añadir imagen
-          </label>
+/* import React, { Component } from "react";
+import "./App.scss";
+import PropTypes from "prop-types";
+
+class GetAvatar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.fr = new FileReader();
+    this.myFileField = React.createRef();
+
+    this.handleFilePicker = this.handleFilePicker.bind(this);
+    this.uploadImage = this.uploadImage.bind(this);
+    this.getImage = this.getImage.bind(this);
+  }
+
+  handleFilePicker() {
+    this.myFileField.current.click();
+  }
+
+  uploadImage(e) {
+    const myFile = e.currentTarget.files[0];
+    this.fr.addEventListener("load", this.getImage);
+    this.fr.readAsDataURL(myFile);
+  }
+
+  getImage() {
+    const image = this.fr.result;
+    this.props.updateAvatar(image);
+  }
+
+  getPreview(isDefault, image) {
+    return !isDefault ? { backgroundImage: `url(${image})` } : {};
+  }
+
+  render() {
+    const { isAvatarDefault, avatar } = this.props;
+    return (
+      <div className="fill__container">
+        <label className="form__label" for="photo">
+          Imagen de perfil
+        </label>
+        <div className="image-form__container">
+          <div className="button">
+            <label
+              className="button__form js-buttonForm"
+              onClick={this.handleFilePicker}
+              for="photo"
+            >
+              Añadir imagen
+            </label>
+          </div>
+          <input
+            className="form__input button-image js-inputPhoto"
+            type="file"
+            value=""
+            id="photo"
+            ref={this.myFileField}
+            onChange={this.uploadImage}
+          />
+          <div
+            className="small-image__container smallphoto js-smallPhoto"
+            style={this.getPreview(isAvatarDefault, avatar)}
+          ></div>
         </div>
-        <input
-          className="form__input button-image js-inputPhoto"
-          type="file"
-          value=""
-          id="photo"
-        />
-        <div className="small-image__container smallphoto js-smallPhoto"></div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default GetAvatar;
+GetAvatar.propTypes = {
+  isAvatarDefault: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  updateAvatar: PropTypes.func.isRequired,
+};
+
+export default GetAvatar; */
