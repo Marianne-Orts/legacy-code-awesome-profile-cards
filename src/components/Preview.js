@@ -11,9 +11,9 @@ function Preview(props) {
           <i className="fa fa-trash-alt" aria-hidden="true" alt="trash-can"></i>
           Reset
         </button>
-        <section className="page js-card">
-          <div className={`container ${clasePalettes}`}>
-            <div className={`container__main-texts ${clasePalettes}`}>
+        <section className={`page js-card ${clasePalettes}`}>
+          <div className="container">
+            <div className="container__main-texts">
               <h2
                 className={`container__main-texts--title jsnamepreview ${clasePalettes}`}
               >
