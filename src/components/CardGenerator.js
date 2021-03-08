@@ -16,7 +16,7 @@ function CardGenerator() {
     email: "",
     linkedin: "",
     github: "",
-    photo: "",
+    photo: "  ", //quitar 2 espacios cuanod se meta getavatar
   });
 
   const [palettesWithLifting, setPalettesWithLifting] = useState("");
