@@ -22,13 +22,19 @@ function Share(props) {
           href={props.responseApi.cardUrl}
           className={showTwitter + " urlcard"}
           target="_blank"
+          rel="noreferrer"
         >
           {props.responseApi.cardUrl}
         </a>
 
         <div className="share-button-twitter--container">
           <button className={showTwitter + " share-button--twitter"}>
-            <a href={linkTwitter} className="twitterlink" target="_blank">
+            <a
+              href={linkTwitter}
+              className="twitterlink"
+              target="_blank"
+              rel="noreferrer"
+            >
               Compartir en twitter
             </a>
             <i className="fab fa-twitter"></i>

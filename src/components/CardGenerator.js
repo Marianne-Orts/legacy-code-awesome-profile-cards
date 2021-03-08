@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
-import Share from "./Share";
 import Preview from "./Preview";
 import sendDataToApi from "../services/SendDataToApi";
 import "./App.scss";
