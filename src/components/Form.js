@@ -71,6 +71,7 @@ function Form(props) {
         <Share
           hidden={claseShare}
           handleShareWithLifting={props.handleShareWithLifting}
+          responseApi={props.responseApi}
         />
         <div className="line-dividing"></div>
       </section>

@@ -43,30 +43,34 @@ function CardGenerator() {
       github: "",
     });
   };
-  const handleShareWithLifting = () => {
-    sendDataToApi(data).then((response) => {
-      /* linksContainer.classList.remove("share__hidden");
-      if (data.success === true) {
-        textUrl.innerHTML = "La tarjeta ha sido creada:";
-        linkUrl.innerHTML = data.cardURL;
-        linkUrl.href = data.cardURL;
-        const urlTwitter = data.cardURL;
-        twitterUrl.href = `https://twitter.com/intent/tweet?url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20${urlTwitter}`;
-        twitterButton.classList.remove("twitterhidden");
-      } else {
-        textUrl.innerHTML =
-          "Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.";
-        linkUrl.href = "";
-        linkUrl.innerHTML = "";
-        twitterButton.classList.add("twitterhidden");
-      }
-    }); */
-    });
-  };
+
   const [responseApi, setResponseApi] = useState({
     explanationText: "",
     cardUrl: "",
+    success: false,
   });
+
+  const handleShareWithLifting = () => {
+    sendDataToApi(data).then((response) => {
+      setResponseApi((prevState) => {
+        if (response.success === true) {
+          return {
+            ...prevState,
+            explanationText: "La tarjeta ha sido creada:",
+            cardUrl: response.cardURL,
+            success: true,
+          };
+        } else {
+          return {
+            ...prevState,
+            explanationText:
+              "Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.",
+            success: false,
+          };
+        }
+      });
+    });
+  };
 
   return (
     <div className="App">
@@ -80,6 +84,7 @@ function CardGenerator() {
           palettesWithLifting={palettesWithLifting}
           handlePalettesWithLifting={handlePalettesWithLifting}
           handleShareWithLifting={handleShareWithLifting}
+          responseApi={responseApi}
         />
       </section>
       <Footer />

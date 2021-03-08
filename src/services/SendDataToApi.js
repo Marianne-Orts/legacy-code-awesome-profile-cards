@@ -7,10 +7,9 @@ const sendDataToApi = (data) => {
     headers: {
       "content-type": "application/json",
     },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      /* linksContainer.classList.remove("share__hidden");
+  }).then((response) => response.json());
+  /* .then((data) => {
+      linksContainer.classList.remove("share__hidden");
       if (data.success === true) {
         textUrl.innerHTML = "La tarjeta ha sido creada:";
         linkUrl.innerHTML = data.cardURL;
@@ -25,8 +24,8 @@ const sendDataToApi = (data) => {
         linkUrl.innerHTML = "";
         twitterButton.classList.add("twitterhidden");
       }
+    }); 
     }); */
-    });
 };
 
 export default sendDataToApi;
