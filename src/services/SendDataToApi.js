@@ -1,8 +1,7 @@
-/* const SendDataToApi = () => {
-    const urlServe = "https://awesome-profile-cards.herokuapp.com/card";
-    const data = getUserData();
-    return fetch  
-    (urlServe, {
+const sendDataToApi = (data) => {
+  const urlServe = "https://awesome-profile-cards.herokuapp.com/card";
+
+  return fetch(urlServe, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -11,7 +10,7 @@
   })
     .then((response) => response.json())
     .then((data) => {
-      linksContainer.classList.remove("share__hidden");
+      /* linksContainer.classList.remove("share__hidden");
       if (data.success === true) {
         textUrl.innerHTML = "La tarjeta ha sido creada:";
         linkUrl.innerHTML = data.cardURL;
@@ -26,7 +25,8 @@
         linkUrl.innerHTML = "";
         twitterButton.classList.add("twitterhidden");
       }
+    }); */
     });
- */
+};
 
-/* shareBtn.classList.add("button-backgroundcolor"); */
+export default sendDataToApi;

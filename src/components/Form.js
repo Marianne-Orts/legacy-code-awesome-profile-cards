@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Palettes from "./Palettes";
 import InputList from "./InputList";
-import GetAvatar from "./GetAvatar";
+/* import GetAvatar from "./GetAvatar"; */
 import Share from "./Share";
 import Collapsable from "./Collapsable";
 
@@ -57,7 +57,7 @@ function Form(props) {
           handleInput={props.handleInput}
           data={props.data}
         />
-        <GetAvatar />
+        {/* <GetAvatar /> */}
 
         <div className="line-dividing--fill"></div>
       </section>
@@ -68,7 +68,10 @@ function Form(props) {
           title={"Comparte"}
           funcion={funcionShare}
         />
-        <Share hidden={claseShare} />
+        <Share
+          hidden={claseShare}
+          handleShareWithLifting={props.handleShareWithLifting}
+        />
         <div className="line-dividing"></div>
       </section>
     </div>
