@@ -4,6 +4,9 @@ import Footer from "./Footer";
 import Form from "./Form";
 import Preview from "./Preview";
 import sendDataToApi from "../services/SendDataToApi";
+import GetAvatar from "./GetAvatar";
+import Profile from "./Profile";
+
 import "./App.scss";
 
 function CardGenerator() {
@@ -15,7 +18,7 @@ function CardGenerator() {
     email: "",
     linkedin: "",
     github: "",
-    photo: "  ", //quitar 2 espacios cuanod se meta getavatar
+    photo: "",
   });
 
   const [palettesWithLifting, setPalettesWithLifting] = useState("");

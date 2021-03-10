@@ -1,4 +1,5 @@
-/* import React, { Component } from "react";
+import React, { Component } from "react";
+import defaultAvatar from "../images/paquita.png";
 import "./App.scss";
 import PropTypes from "prop-types";
 
@@ -9,19 +10,21 @@ class GetAvatar extends Component {
     this.fr = new FileReader();
     this.myFileField = React.createRef();
 
-    this.handleFilePicker = this.handleFilePicker.bind(this);
+    /* this.handleFilePicker = this.handleFilePicker.bind(this); */
     this.uploadImage = this.uploadImage.bind(this);
     this.getImage = this.getImage.bind(this);
   }
 
-  handleFilePicker() {
+  /*  handleFilePicker() {
     this.myFileField.current.click();
-  }
+  } */
 
-  uploadImage(e) {
-    const myFile = e.currentTarget.files[0];
-    this.fr.addEventListener("load", this.getImage);
-    this.fr.readAsDataURL(myFile);
+  uploadImage(ev) {
+    if (ev.currentTarget.files.length > 0) {
+      const myFile = ev.currentTarget.files[0];
+      this.fr.addEventListener("load", this.getImage);
+      this.fr.readAsDataURL(myFile);
+    }
   }
 
   getImage() {
@@ -29,12 +32,13 @@ class GetAvatar extends Component {
     this.props.updateAvatar(image);
   }
 
-  getPreview(isDefault, image) {
+  /* getPreview(isDefault, image) {
     return !isDefault ? { backgroundImage: `url(${image})` } : {};
   }
-
+ */
   render() {
-    const { isAvatarDefault, avatar } = this.props;
+    /* const { isAvatarDefault, avatar } = this.props; */
+    const avatar = this.props.avatar === "" ? defaultAvatar : this.props.avatar;
     return (
       <div className="fill__container">
         <label className="form__label" for="photo">
@@ -60,7 +64,8 @@ class GetAvatar extends Component {
           />
           <div
             className="small-image__container smallphoto js-smallPhoto"
-            style={this.getPreview(isAvatarDefault, avatar)}
+            /* style={this.getPreview(isAvatarDefault, avatar)} */
+            style={{ backgroundImage: `url(${avatar})` }}
           ></div>
         </div>
       </div>
@@ -74,4 +79,4 @@ GetAvatar.propTypes = {
   updateAvatar: PropTypes.func.isRequired,
 };
 
-export default GetAvatar; */
+export default GetAvatar;
