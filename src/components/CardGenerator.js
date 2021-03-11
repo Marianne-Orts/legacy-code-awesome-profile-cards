@@ -4,8 +4,6 @@ import Footer from "./Footer";
 import Form from "./Form";
 import Preview from "./Preview";
 import sendDataToApi from "../services/SendDataToApi";
-import GetAvatar from "./GetAvatar";
-import Profile from "./Profile";
 
 import "./App.scss";
 
@@ -28,7 +26,6 @@ function CardGenerator() {
     });
   };
 
-  const [palettesWithLifting, setPalettesWithLifting] = useState("");
   const handlePalettesWithLifting = (palettesValue) => {
     setData({
       ...data,
@@ -51,6 +48,7 @@ function CardGenerator() {
       linkedin: "",
       github: "",
       photo: "",
+      palette: "1"
     });
   };
 
@@ -91,7 +89,6 @@ function CardGenerator() {
           data={data}
           handleInput={handleInput}
           handleReset={handleReset}
-          palettesWithLifting={palettesWithLifting}
           handlePalettesWithLifting={handlePalettesWithLifting}
           handleShareWithLifting={handleShareWithLifting}
           handleUpdateAvatar={handleUpdateAvatar}

@@ -1,6 +1,8 @@
 import Input from "./Input";
 import GetAvatar from "./GetAvatar";
+
 function InputList(props) {
+
   return (
     <div
       className={
