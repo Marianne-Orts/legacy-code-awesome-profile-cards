@@ -28,10 +28,10 @@ function Preview(props) {
             {props.data.photo === "" ? (
               <div className="page__container--photo page__container--photo-default js-previewPhoto js-previewPhotoReset "></div>
             ) : (
-              <div className="page__container--photo">
-                <img className="photoFix" src={props.data.photo} alt="" />
-              </div>
-            )}
+                <div className="page__container--photo">
+                  <img className="photoFix" src={props.data.photo} alt="" />
+                </div>
+              )}
           </div>
           <section className="page__icons">
             <Icon
@@ -39,7 +39,7 @@ function Preview(props) {
               iconLink={"fas fa-mobile-alt link"}
               alt={"icon-phone"}
               palette={clasePalettes}
-              href={props.data.phone}
+              href={"tel:" + props.data.phone}
             />
             <Icon
               icon={"icon-mail"}
@@ -55,6 +55,13 @@ function Preview(props) {
               alt={"icon-linkedin"}
               palette={clasePalettes}
               href={props.data.linkedin}
+              href={
+                props.data.linkedin.includes("https://linkedin.com/")
+                  ? `${props.data.linkedin}`
+                  : props.data.linkedin
+                    ? `https://linkedin.com/in/${props.data.linkedin}`
+                    : `https://linkedin.com`
+              }
             />
 
             <Icon
@@ -62,7 +69,11 @@ function Preview(props) {
               iconLink={"fab fa-github-alt link"}
               alt={"icon-github"}
               palette={clasePalettes}
-              href={props.data.github}
+              href={
+                props.data.github.includes("https://github.com/")
+                  ? `${props.data.github}`
+                  : `https://github.com/${props.data.github}`
+              }
             />
           </section>
         </section>

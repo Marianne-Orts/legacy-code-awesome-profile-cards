@@ -49,6 +49,7 @@ function Form(props) {
           funcion={funcionPalettes}
         />
         <Palettes
+          data={props.data}
           hidden={clasePalettes}
           handlePalettesWithLifting={props.handlePalettesWithLifting}
         />
@@ -60,7 +61,7 @@ function Form(props) {
           iconCollapsable={"far fa-keyboard dropdown__icon"}
           title={"Rellena"}
           funcion={funcionInputs}
-          /* funcion2={funcionAvatar} */
+        /* funcion2={funcionAvatar} */
         />
         <InputList
           hidden={claseInputs}

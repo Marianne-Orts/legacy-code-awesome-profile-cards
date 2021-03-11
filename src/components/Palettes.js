@@ -30,6 +30,7 @@ function Palettes(props) {
             className="colorcontainer__option js-palette"
             type="radio"
             name="palette"
+            checked={props.data.palette === "2"}
             value="2"
             onChange={handlePalettes}
           />
@@ -45,6 +46,7 @@ function Palettes(props) {
             className="colorcontainer__option js-palette"
             type="radio"
             name="palette"
+            checked={props.data.palette === "3"}
             value="3"
             onChange={handlePalettes}
           />
@@ -59,6 +61,7 @@ function Palettes(props) {
             className="colorcontainer__option js-palette"
             type="radio"
             name="palette"
+            checked={props.data.palette === "4"}
             value="4"
             onChange={handlePalettes}
           />
