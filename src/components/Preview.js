@@ -25,7 +25,13 @@ function Preview(props) {
             </div>
           </div>
           <div className="Page__container">
-            <div className="page__container--photo js-previewPhoto js-previewPhotoReset "></div>
+            {props.data.photo === "" ? (
+              <div className="page__container--photo page__container--photo-default js-previewPhoto js-previewPhotoReset "></div>
+            ) : (
+              <div className="page__container--photo">
+                <img src={props.data.photo} alt="" />
+              </div>
+            )}
           </div>
           <section className="page__icons">
             <Icon

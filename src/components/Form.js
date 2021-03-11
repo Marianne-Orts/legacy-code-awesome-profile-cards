@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import Palettes from "./Palettes";
 import InputList from "./InputList";
-import GetAvatar from "./GetAvatar";
 import Profile from "./Profile";
 import Share from "./Share";
 import Collapsable from "./Collapsable";
 
 function Form(props) {
-  const [avatar, setAvatar] = useState("");
-  const updateAvatar = (avatar) => {
-    setAvatar(avatar);
-  };
-
   const [clasePalettes, setClasePalettes] = useState(""); //valor incial
   const funcionPalettes = () => {
     if (clasePalettes === "") {
@@ -71,15 +65,11 @@ function Form(props) {
         <InputList
           hidden={claseInputs}
           handleInput={props.handleInput}
+          handleUpdateAvatar={props.handleUpdateAvatar}
           data={props.data}
         />
-        <GetAvatar
-          /*  hidden={claseAvatar} */
-          /* funcion={funcionAvatar} */
-          avatar={avatar}
-          updateAvatar={updateAvatar}
-        />
-        <Profile avatar={avatar} />
+
+        <Profile avatar={props.data.photo} />
         <div className="line-dividing--fill"></div>
       </section>
       <section className="share">

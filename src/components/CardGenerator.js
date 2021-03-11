@@ -21,6 +21,13 @@ function CardGenerator() {
     photo: "",
   });
 
+  const handleUpdateAvatar = (avatar) => {
+    setData({
+      ...data,
+      photo: avatar,
+    });
+  };
+
   const [palettesWithLifting, setPalettesWithLifting] = useState("");
   const handlePalettesWithLifting = (palettesValue) => {
     setData({
@@ -43,6 +50,7 @@ function CardGenerator() {
       phone: "",
       linkedin: "",
       github: "",
+      photo: "",
     });
   };
 
@@ -86,6 +94,7 @@ function CardGenerator() {
           palettesWithLifting={palettesWithLifting}
           handlePalettesWithLifting={handlePalettesWithLifting}
           handleShareWithLifting={handleShareWithLifting}
+          handleUpdateAvatar={handleUpdateAvatar}
           responseApi={responseApi}
         />
       </section>
