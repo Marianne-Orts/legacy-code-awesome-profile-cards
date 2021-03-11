@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Palettes from "./Palettes";
 import InputList from "./InputList";
-import GetAvatar from "./GetAvatar";
+import Profile from "./Profile";
 import Share from "./Share";
 import Collapsable from "./Collapsable";
 
@@ -30,6 +30,15 @@ function Form(props) {
       setClaseShare("");
     }
   };
+  /* const [claseAvatar, setClaseAvatar] = useState(""); //valor incial
+  const funcionAvatar = () => {
+    if (claseAvatar === "") {
+      setClaseAvatar("hidden");
+    } else {
+      setClaseAvatar("");
+    }
+  };
+ */
 
   return (
     <div className="centralcolumn divided__options">
@@ -40,6 +49,7 @@ function Form(props) {
           funcion={funcionPalettes}
         />
         <Palettes
+          data={props.data}
           hidden={clasePalettes}
           handlePalettesWithLifting={props.handlePalettesWithLifting}
         />
@@ -51,14 +61,16 @@ function Form(props) {
           iconCollapsable={"far fa-keyboard dropdown__icon"}
           title={"Rellena"}
           funcion={funcionInputs}
+        /* funcion2={funcionAvatar} */
         />
         <InputList
           hidden={claseInputs}
           handleInput={props.handleInput}
+          handleUpdateAvatar={props.handleUpdateAvatar}
           data={props.data}
         />
-        <GetAvatar />
 
+        <Profile avatar={props.data.photo} />
         <div className="line-dividing--fill"></div>
       </section>
       <section className="share">
@@ -68,7 +80,11 @@ function Form(props) {
           title={"Comparte"}
           funcion={funcionShare}
         />
-        <Share hidden={claseShare} />
+        <Share
+          hidden={claseShare}
+          handleShareWithLifting={props.handleShareWithLifting}
+          responseApi={props.responseApi}
+        />
         <div className="line-dividing"></div>
       </section>
     </div>

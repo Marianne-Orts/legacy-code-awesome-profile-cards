@@ -1,6 +1,8 @@
 import Input from "./Input";
+import GetAvatar from "./GetAvatar";
 
 function InputList(props) {
+
   return (
     <div
       className={
@@ -25,7 +27,11 @@ function InputList(props) {
           handleReset={props.handleReset}
           value={props.data.job}
         />
-        {/* GET AVATAR  */}
+        <GetAvatar
+          avatar={props.data.photo}
+          updateAvatar={props.handleUpdateAvatar}
+        />
+
         <Input
           id={"email"}
           placeholder={"Ej: nombre.apellidos@email.com"}

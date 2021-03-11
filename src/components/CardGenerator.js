@@ -1,9 +1,11 @@
-import "./App.scss";
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import Preview from "./Preview";
+import sendDataToApi from "../services/SendDataToApi";
+
+import "./App.scss";
 
 function CardGenerator() {
   const [data, setData] = useState({
@@ -16,11 +18,15 @@ function CardGenerator() {
     github: "",
     photo: "",
   });
-  const [palettesWithLifting, setPalettesWithLifting] = useState("");
+
+  const handleUpdateAvatar = (avatar) => {
+    setData({
+      ...data,
+      photo: avatar,
+    });
+  };
+
   const handlePalettesWithLifting = (palettesValue) => {
-    console.log("Has seleccionado la paleta ", palettesValue);
-    //setPalettesWithLifting(palettesValue);
-    //data.palette=palettesValue; NO VALE
     setData({
       ...data,
       palette: palettesValue,
@@ -41,6 +47,36 @@ function CardGenerator() {
       phone: "",
       linkedin: "",
       github: "",
+      photo: "",
+      palette: "1"
+    });
+  };
+
+  const [responseApi, setResponseApi] = useState({
+    explanationText: "",
+    cardUrl: "",
+    success: false,
+  });
+
+  const handleShareWithLifting = () => {
+    sendDataToApi(data).then((response) => {
+      setResponseApi((prevState) => {
+        if (response.success === true) {
+          return {
+            ...prevState,
+            explanationText: "La tarjeta ha sido creada:",
+            cardUrl: response.cardURL,
+            success: true,
+          };
+        } else {
+          return {
+            ...prevState,
+            explanationText:
+              "Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.",
+            success: false,
+          };
+        }
+      });
     });
   };
 
@@ -53,8 +89,10 @@ function CardGenerator() {
           data={data}
           handleInput={handleInput}
           handleReset={handleReset}
-          palettesWithLifting={palettesWithLifting}
           handlePalettesWithLifting={handlePalettesWithLifting}
+          handleShareWithLifting={handleShareWithLifting}
+          handleUpdateAvatar={handleUpdateAvatar}
+          responseApi={responseApi}
         />
       </section>
       <Footer />

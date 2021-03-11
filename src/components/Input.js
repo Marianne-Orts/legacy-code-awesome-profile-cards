@@ -23,7 +23,7 @@ function Input(props) {
     </div>
   );
 }
-Input.defaultProps = {
-  type: "text",
-};
+// Input.defaultProps = {
+//   type: "text",
+// };
 export default Input;
