@@ -39,7 +39,7 @@ function Preview(props) {
               iconLink={"fas fa-mobile-alt link"}
               alt={"icon-phone"}
               palette={clasePalettes}
-              href={props.data.phone}
+              href={"tel:" + props.data.phone}
             />
             <Icon
               icon={"icon-mail"}
