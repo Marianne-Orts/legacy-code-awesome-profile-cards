@@ -14,7 +14,7 @@ function Palettes(props) {
             className="colorcontainer__option js-input1 js-palette"
             type="radio"
             name="palette"
-            // checked
+            checked
             value="1"
             onChange={handlePalettes}
           />
