@@ -1,11 +1,10 @@
 function Input(props) {
-
   const handleInputChange = (ev) => {
     props.handleInput({
       inputName: ev.target.name,
       inputValue: ev.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="fill__container">
