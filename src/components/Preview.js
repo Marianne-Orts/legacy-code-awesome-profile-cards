@@ -29,7 +29,7 @@ function Preview(props) {
               <div className="page__container--photo page__container--photo-default js-previewPhoto js-previewPhotoReset "></div>
             ) : (
               <div className="page__container--photo">
-                <img src={props.data.photo} alt="" />
+                <img className="photoFix" src={props.data.photo} alt="" />
               </div>
             )}
           </div>
