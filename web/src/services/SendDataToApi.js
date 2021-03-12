@@ -1,5 +1,5 @@
 const sendDataToApi = (data) => {
-  const urlServe = "https://awesome-profile-cards.herokuapp.com/card";
+  const urlServe = "http://localhost:3000/card";
 
   return fetch(urlServe, {
     method: "POST",
