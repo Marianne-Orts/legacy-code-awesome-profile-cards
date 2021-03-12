@@ -32,7 +32,13 @@ function CardGenerator() {
       palette: palettesValue,
     });
   };
-
+  /* const palettesChecked = (palettesValue) => {
+  if (data.palettesValue === ""){
+    setData({
+      ...data,
+      palettesValue:"checked")}
+  }
+} */
   const handleInput = (data) => {
     setData((prevState) => {
       return { ...prevState, [data.inputName]: data.inputValue };

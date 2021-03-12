@@ -3,7 +3,7 @@ function Palettes(props) {
   // const [colorPalettes, setColorPalettes] = useState("1");
   const handlePalettes = (ev) => {
     props.handlePalettesWithLifting(ev.target.value); //POSIBLE (prop.value)
-  }
+  };
 
   return (
     <div className={"colorcontainer dropdowncontainer " + props.hidden}>
@@ -14,7 +14,7 @@ function Palettes(props) {
             className="colorcontainer__option js-input1 js-palette"
             type="radio"
             name="palette"
-            checked={props.data.palette === "1"}
+            checked
             value="1"
             onChange={handlePalettes}
           />
