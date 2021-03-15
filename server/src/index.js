@@ -21,18 +21,27 @@ server.get("/card/:id", (req, res) => {
 server.post("/card", (req, res) => {
   console.log(req.body);
   const response = {};
-  if (!req.body.name) {
+  if (!req.body.name || req.body.name === "") {
     response.success = false;
     response.error = "Missing name parameter";
-  } else if (!req.body.job) {
+  } else if (!req.body.job || req.body.job === "") {
     response.success = false;
     response.error = "Missing job parameter";
-  } else if (!req.body.email) {
+  } else if (!req.body.email || req.body.email === "") {
     response.success = false;
     response.error = "Missing email parameter";
-  } else if (!req.body.photo) {
+  } else if (!req.body.photo || req.body.photo === "") {
     response.success = false;
     response.error = "Missing photo parameter";
+  } else if (!req.body.linkedin || req.body.linkedin === "") {
+    response.success = false;
+    response.error = "Missing Linkedin parameter";
+  } else if (!req.body.github || req.body.github === "") {
+    response.success = false;
+    response.error = "Missing Github parameter";
+  } else if (!req.body.phone || req.body.phone === "") {
+    response.success = false;
+    response.error = "Missing phone parameter";
   } else {
     // All is fine
     // Save to db
