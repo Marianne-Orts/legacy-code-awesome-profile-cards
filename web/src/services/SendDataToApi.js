@@ -1,5 +1,5 @@
 const sendDataToApi = (data) => {
-  const urlServe = "http://localhost:3000/card";
+  const urlServe = "/card/";
 
   return fetch(urlServe, {
     method: "POST",

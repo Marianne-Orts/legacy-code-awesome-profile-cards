@@ -8,8 +8,9 @@ const serverPort = 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
-/* const serverStaticPath = './public';
-server.use(express.static(serverStaticPath)); */
+
+const serverStaticPath = "./public";
+server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
   const response = {
@@ -41,9 +42,12 @@ server.post("/card", (req, res) => {
   res.json(response);
 });
 // not found error
-/* server.get('*', (req, res) => {
+server.get("*", (req, res) => {
   // relative to this directory
-  const notFoundFileRelativePath = '../public/404-not-found.html';
-  const notFoundFileAbsolutePath = path.join(__dirname, notFoundFileRelativePath);
+  const notFoundFileRelativePath = "../public/404-not-found.html";
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
   res.status(404).sendFile(notFoundFileAbsolutePath);
-}); */
+});
