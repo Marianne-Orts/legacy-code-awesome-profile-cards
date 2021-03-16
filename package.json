@@ -2,7 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Server for PS profile cards",
-  "repository": {"url":"https://github.com/Adalab/project-promo-l-module-3-team-8.git"},
+  "repository": {
+    "url": "https://github.com/Adalab/project-promo-l-module-3-team-8.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -13,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
