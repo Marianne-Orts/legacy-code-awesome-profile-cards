@@ -4,7 +4,7 @@ const path = require("path");
 const server = express();
 server.use(cors());
 server.use(express.json());
-const serverPort = 3000;
+const serverPort = process.env.PORT || 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
