@@ -5,6 +5,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 const serverPort = process.env.PORT || 3000;
+server.set("view engine", "ejs");
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -13,10 +14,17 @@ const serverStaticPath = "./public";
 server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
-  const response = {
-    users: [{ name: "Sofía" }, { name: "María" }],
+  const data = {
+    palette: 1,
+    name: "Paquita Salas",
+    job: "CEO PS Management",
+    photo: "url",
+    phone: "545454654",
+    email: "paquita@gmail.com",
+    linkedin: "paquita-salas",
+    github: "paquita-salas",
   };
-  res.json(response);
+  res.render("pages/card", data);
 });
 server.post("/card", (req, res) => {
   console.log(req.body);
