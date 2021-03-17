@@ -22,21 +22,7 @@ server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
   const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
-  const data2 = query.get(req.params.id);
-
-  console.log(data2);
-
-  const data = {
-    palette: 1,
-    name: "Paquita Salas",
-    job: "CEO PS Management",
-    photo: "url",
-    phone: "545454654",
-    email: "paquita@gmail.com",
-    linkedin: "paquita-salas",
-    github: "paquita-salas",
-  };
-
+  const data = query.get(req.params.id);
   res.render("pages/card", data);
 });
 
@@ -68,18 +54,28 @@ server.post("/card", (req, res) => {
     // All is fine
     // Save to db
 
-    const query = db.prepare('INSERT INTO cards (name, job, photo, email, phone, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)');
-    const result = query.run(req.body.name, req.body.job, req.body.photo, req.body.email, req.body.phone, req.body.linkedin, req.body.github, req.body.palette);
+    const query = db.prepare(
+      "INSERT INTO cards (name, job, photo, email, phone, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)"
+    );
+    const result = query.run(
+      req.body.name,
+      req.body.job,
+      req.body.photo,
+      req.body.email,
+      req.body.phone,
+      req.body.linkedin,
+      req.body.github,
+      req.body.palette
+    );
     const newId = result.lastInsertRowid;
 
     response.success = true;
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === "development") {
       response.cardURL = "http://localhost:3000/card/" + newId;
+    } else {
+      response.cardURL =
+        "https://awesome-profilecards-pushreact.herokuapp.com/card/" + newId;
     }
-    else {
-      response.cardURL = "https://awesome-profilecards-pushreact.herokuapp.com/card/" + newId;
-    }
-
   }
   res.json(response);
 });
