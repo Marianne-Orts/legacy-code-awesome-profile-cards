@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# PROYECTO 4. Servidor del Awesome profile cards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## EQUIPO 8 - REACTIVAS
 
-### `npm start`
+Somos el Equipo 8, formado por cuatro mujeres: Marianne Orts, Ana Diz Bermejo, Victoria Kovaleva y María A. Virumbrales.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## DESCRIPCIÓN DEL PROYECTO
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+En este nuevo proyecto hemos desarrollado un Servidor Web para nuestra página de creación de tarjetas personales PAQUITA SALAS MANAGEMENT.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## PASOS QUE HEMOS SEGUIDO
 
-### `npm run build`
+### 1. Crear una nueva tarjeta a través del API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La web envía una petición con datos al servidor para crear una tarjeta
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Visualizar una tarjeta existente a través del motor de plantillas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Cada vez que se crea una tarjeta desde la web, el servidor asocia una URL a cada tarjeta.
 
-### `npm run eject`
+### 3. Servidor de Estáticos.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Unificamos la Parte Front y la parte Back del proyecto en un único servidor.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 4. Servidor de Producción.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Una vez finalizado el servidor lo publicamos en un servidor real, vamos a utilizar HEROKU.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Programas y Herramientas Utilizadas.
 
-### Code Splitting
+- Hemos reforzado los conocimientos de Node JS, y hemos incorporado Express JS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- También hemos aprendido SQL para el manejo de bases de datos.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### ¿CÓMO HEMOS TRABAJADO?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Trabajo en Equipo y aplicando filosofía Agile.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**¡¡GRACIAS, ESPERAMOS QUE DISFRUTÉIS LA WEB!!**
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+
+
+
+
+
+
