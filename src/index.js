@@ -1,19 +1,31 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const Database = require("better-sqlite3");
+
 const server = express();
 server.use(cors());
 server.use(express.json());
+
 const serverPort = process.env.PORT || 3000;
 server.set("view engine", "ejs");
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+const db = new Database("./src/data/cards.db", {
+  verbose: console.log,
+});
+
 const serverStaticPath = "./public";
 server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
+  const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
+  const data2 = query.get(req.params.id);
+
+  console.log(data2);
+
   const data = {
     palette: 1,
     name: "Paquita Salas",
@@ -24,8 +36,10 @@ server.get("/card/:id", (req, res) => {
     linkedin: "paquita-salas",
     github: "paquita-salas",
   };
+
   res.render("pages/card", data);
 });
+
 server.post("/card", (req, res) => {
   console.log(req.body);
   const response = {};
@@ -53,8 +67,19 @@ server.post("/card", (req, res) => {
   } else {
     // All is fine
     // Save to db
+
+    const query = db.prepare('INSERT INTO cards (name, job, photo, email, phone, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)');
+    const result = query.run(req.body.name, req.body.job, req.body.photo, req.body.email, req.body.phone, req.body.linkedin, req.body.github, req.body.palette);
+    const newId = result.lastInsertRowid;
+
     response.success = true;
-    response.cardURL = "https://TODO-HA-IDO-BIEN.com";
+    if (process.env.NODE_ENV === 'development') {
+      response.cardURL = "http://localhost:3000/card/" + newId;
+    }
+    else {
+      response.cardURL = "https://awesome-profilecards-pushreact.herokuapp.com/card/" + newId;
+    }
+
   }
   res.json(response);
 });
