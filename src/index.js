@@ -5,7 +5,7 @@ const Database = require("better-sqlite3");
 
 const server = express();
 server.use(cors());
-server.use(express.json());
+server.use(express.json({ limit: "10mb" }));
 
 const serverPort = process.env.PORT || 3000;
 server.set("view engine", "ejs");
@@ -27,7 +27,7 @@ server.get("/card/:id", (req, res) => {
 });
 
 server.post("/card", (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   const response = {};
   if (!req.body.name || req.body.name === "") {
     response.success = false;
@@ -70,7 +70,7 @@ server.post("/card", (req, res) => {
     const newId = result.lastInsertRowid;
 
     response.success = true;
-    if (process.env.NODE_ENV === "development") {
+    if (req.host === "localhost") {
       response.cardURL = "http://localhost:3000/card/" + newId;
     } else {
       response.cardURL =
